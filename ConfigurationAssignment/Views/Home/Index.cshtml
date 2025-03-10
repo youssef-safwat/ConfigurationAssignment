@@ -7,21 +7,21 @@
 <!-- Social Media Section -->
 <div class="flex text-center margin-top">
     <div class="box blue-back">
-        <a href=@ViewBag.FaceBook target="_blank" rel="noopener" class="text-white">
+        <a href=@ViewBag.Social.Facebook target="_blank" rel="noopener" class="text-white">
             <i class="fab fa-facebook-f fa-2x"></i>
             <div class="margin-top">Facebook</div>
         </a>
     </div>
 
     <div class="box green-back">
-        <a href=@ViewBag.Twitter target="_blank" rel="noopener" class="text-white">
+        <a href=@ViewBag.Social.Twitter target="_blank" rel="noopener" class="text-white">
             <i class="fab fa-twitter fa-2x"></i>
             <div class="margin-top">Twitter</div>
         </a>
     </div>
     <environment exclude="Development">
         <div class="box orange-back">
-            <a href=@ViewBag.Instagram target="_blank" rel="noopener" class="text-white">
+            <a href=@ViewBag.Social.Instagram target="_blank" rel="noopener" class="text-white">
                 <i class="fab fa-instagram fa-2x"></i>
                 <div class="margin-top">Instagram</div>
             </a>
@@ -29,7 +29,7 @@
     </environment>
 
     <div class="box text-red background-color-white">
-        <a href=@ViewBag.YouTube target="_blank" rel="noopener">
+        <a href=@ViewBag.Social.Youtube target="_blank" rel="noopener">
             <i class="fab fa-youtube fa-2x"></i>
             <div class="margin-top">YouTube</div>
         </a>

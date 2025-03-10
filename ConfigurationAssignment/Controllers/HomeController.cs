@@ -6,16 +6,13 @@ namespace ConfigurationAssignment.Controllers
 {
     public class HomeController(IOptions<SocialMediaLinksOptions> socialMediaLinksOptions) : Controller
     {
-        private readonly IOptions<SocialMediaLinksOptions> _socialMediaOptions = socialMediaLinksOptions;
+        private readonly SocialMediaLinksOptions _socialMediaOptions = socialMediaLinksOptions.Value;
         [HttpGet]
         [Route("/")]
         public IActionResult Index()
         {
-            SocialMediaLinksOptions social = _socialMediaOptions.Value;
-            ViewBag.FaceBook = social.Facebook;
-            ViewBag.YouTube = social.Youtube;
-            ViewBag.Twitter = social.Twitter;
-            ViewBag.Instagram = social.Instagram;
+            SocialMediaLinksOptions social = _socialMediaOptions;
+            ViewBag.Social = social;
             return View();
         }
     }
